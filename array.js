@@ -31,23 +31,15 @@ const cards = (
     1.3, 2.3, 3.3, 4.3, 5.3, 6.3, 7.3, 8.3, 9.3, 10.3, 11.3, 12.3, 13.3,]
 )
 
-console.log(cards);
 
 
-var randomItem = cards[Math.floor(Math.random() * cards.length)];
-
-
-console.log(randomItem);
-
-
-
-let sh_card = shuffle(cards);
+let sh_card = shuffle(cards);    //cria um array (sh_cards, com os valores de cards com posições aleatorias
 console.log(sh_card);
 
 
-let player =parseInt(prompt( 'number of players?'))
+let player =parseInt(prompt( 'number of players?')) 
 
-if (player < 2)  {
+if (player < 2)  {         // verifica se ha menos de 2 players
 
   alert('Numero de players abaixo do minimo ("2")')
 
@@ -55,7 +47,7 @@ if (player < 2)  {
   mesa_inicio = player * 2
 
   
-if (player >22)  {
+if (player >22)  {   //verifica se ha mais de 22 players 
   alert('Numero de players acima do limite ("22")')
   
   
@@ -64,16 +56,16 @@ if (player >22)  {
   
   }
   mesa_inicio = player * 2
-  // detecta se não for um número (not a number)
+  
 
-if (isNaN){
+if (player == NaN){ // detecta se não for um número (not a number)
   alert("Isso não é um número!")
   location.reload()
 }
 mesa_inicio = player * 2
 
 
-let mesa = sh_card.splice(mesa_inicio,5)
+let mesa = sh_card.splice(mesa_inicio,5) //separa em uma rray as cartas da mesa
 
 
 
