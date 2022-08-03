@@ -30,69 +30,45 @@ let sh_card = shuffle(cards);    //cria um array (sh_cards, com os valores de ca
 console.log(sh_card);
 
 
-let player =parseInt(prompt( 'number of players?')) 
+let numberPlayers =parseInt(prompt( 'number of players?')) 
 
-if (player < 2)  {         // verifica se ha menos de 2 players
+if (numberPlayers < 2)  {         // verifica se ha menos de 2 players
 
   alert('Numero de players abaixo do minimo ("2")')
 
   location.reload()}
-  mesa_inicio = player * 2
+  mesa_inicio = numberPlayers * 2
 
   
-if (player >22)  {   //verifica se ha mais de 22 players 
+if (numberPlayers >22)  {   //verifica se ha mais de 22 players 
   alert('Numero de players acima do limite ("22")')
-  
-  
   location.reload()
-  
-  
   }
-  
 
-if (player == NaN){ // detecta se não for um número (not a number)
+if (numberPlayers == NaN){ // detecta se não for um número (not a number)
   alert("Isso não é um número!")
   location.reload()
 }
-if (player == isNaN){
-  alert("Isso não é um número!")
-  location.reload()
-}
-mesa = player * 2 //define onde no deck começara a pegar cartas da mesa, considerando que ha 1 carta de descarte
-
-
+mesa = numberPlayers * 2 //define onde no deck começara a pegar cartas da mesa, considerando que ha 1 carta de descarte
 
 let mesa_3 = sh_card.splice(mesa+1,3) //separa em uma array as 3 cartas iniciais da mesa
-
-
 let mesa_4 = sh_card.splice(mesa+2,1) //separa a 4ª carta da mesa, considerando 1 descarte
 let mesa_5 = sh_card.splice(mesa+3,1) //separa a 5ª carta da mesa, considerando 1 descarte
 
-let bigblind = parseInt(Math.random() * (player));
+// Gera o Dealer/Small/Big Blind
+let dealer = parseInt(Math.random() * (numberPlayers));
+let smallblind=dealer+1
+let bigblind=smallblind+1
 
-let smallblind = parseInt(Math.random() * (player));
 
-let dealer = parseInt(Math.random() * (player));
-
-if (bigblind,smallblind,dealer == NaN){ // detecta se não for um número (not a number)
-  alert("Isso não é um número!")
-  location.reload()
-}
-
-// Gera quais index serão os big/small/dealer
 
 console.log(`O bigblind é ${bigblind}`)
 console.log(`O smallblind é ${smallblind}`)
 console.log(`O Dealer é ${dealer}`)
 
-
-
-
 console.log(mesa_3)
 console.log(mesa_4)
 console.log(mesa_5)
-
-
 
 alert('')
 
