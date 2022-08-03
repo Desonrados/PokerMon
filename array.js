@@ -47,7 +47,7 @@ console.log(sh_card);
 
 let player =parseInt(prompt( 'number of players?'))
 
-if (player == NaN || player < 2)  {
+if (player < 2)  {
 
   alert('Numero de players abaixo do minimo ("2")')
 
@@ -63,7 +63,14 @@ if (player >22)  {
   
   
   }
-    mesa_inicio = player * 2
+  mesa_inicio = player * 2
+  // detecta se não for um número (not a number)
+
+if (isNaN){
+  alert("Isso não é um número!")
+  location.reload()
+}
+mesa_inicio = player * 2
 
 
 let mesa = sh_card.splice(mesa_inicio,5)
