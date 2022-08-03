@@ -16,13 +16,6 @@ function shuffle(array) {
   return array;
 }
 
-
-
-
-
-
-
-
 const cards = (
 
   [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0,
@@ -61,6 +54,10 @@ if (player == NaN){ // detecta se não for um número (not a number)
   alert("Isso não é um número!")
   location.reload()
 }
+if (player == isNaN){
+  alert("Isso não é um número!")
+  location.reload()
+}
 mesa = player * 2 //define onde no deck começara a pegar cartas da mesa, considerando que ha 1 carta de descarte
 
 
@@ -68,8 +65,25 @@ mesa = player * 2 //define onde no deck começara a pegar cartas da mesa, consid
 let mesa_3 = sh_card.splice(mesa+1,3) //separa em uma array as 3 cartas iniciais da mesa
 
 
-let mesa_4 = sh_card.splice(mesa+2,1) //separa a 4 carta da mesa, considerando 1 descarte
-let mesa_5 = sh_card.splice(mesa+3,1) //separa a 5 carta da mesa, considerando 1 descarte
+let mesa_4 = sh_card.splice(mesa+2,1) //separa a 4ª carta da mesa, considerando 1 descarte
+let mesa_5 = sh_card.splice(mesa+3,1) //separa a 5ª carta da mesa, considerando 1 descarte
+
+let bigblind = parseInt(Math.random() * (player));
+
+let smallblind = parseInt(Math.random() * (player));
+
+let dealer = parseInt(Math.random() * (player));
+
+if (bigblind,smallblind,dealer == NaN){ // detecta se não for um número (not a number)
+  alert("Isso não é um número!")
+  location.reload()
+}
+
+// Gera quais index serão os big/small/dealer
+
+console.log(`O bigblind é ${bigblind}`)
+console.log(`O smallblind é ${smallblind}`)
+console.log(`O Dealer é ${dealer}`)
 
 
 
@@ -81,3 +95,14 @@ console.log(mesa_5)
 
 
 alert('')
+
+// Função que utilizaremos mais tarde hehe
+/*function makeCard(someNumber, image) {
+  return {
+    someNumber,
+    image
+  }
+}
+
+const card1 = makeCard(1, "./cool.png")
+card1.someNumber*?*/
