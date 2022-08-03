@@ -32,20 +32,25 @@ console.log(sh_card);
 
 let numberPlayers =parseInt(prompt( 'number of players?')) 
 
-if (numberPlayers < 2)  {         // verifica se ha menos de 2 players
-
+if (numberPlayers < 2)  
+{ 
+  // verifica se ha menos de 2 players
   alert('Numero de players abaixo do minimo ("2")')
 
-  location.reload()}
+  location.reload()
+}
   mesa_inicio = numberPlayers * 2
 
   
-if (numberPlayers >22)  {   //verifica se ha mais de 22 players 
+if (numberPlayers >22)  
+{  
+  //verifica se ha mais de 22 players 
   alert('Numero de players acima do limite ("22")')
   location.reload()
-  }
+}
 
-if (numberPlayers == NaN){ // detecta se não for um número (not a number)
+if (numberPlayers == NaN)
+{ // detecta se não for um número (not a number)
   alert("Isso não é um número!")
   location.reload()
 }
@@ -59,8 +64,10 @@ let mesa_5 = sh_card.splice(mesa+3,1) //separa a 5ª carta da mesa, considerando
 let dealer = parseInt(Math.random() * (numberPlayers));
 let smallblind=dealer+1
 let bigblind=smallblind+1
-
-
+if (bigblind>numberPlayers)
+{
+  bigblind=bigblind-numberPlayers
+}
 
 console.log(`O bigblind é ${bigblind}`)
 console.log(`O smallblind é ${smallblind}`)
