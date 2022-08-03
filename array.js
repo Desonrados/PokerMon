@@ -55,24 +55,29 @@ if (player >22)  {   //verifica se ha mais de 22 players
   
   
   }
-  mesa_inicio = player * 2
   
 
 if (player == NaN){ // detecta se não for um número (not a number)
   alert("Isso não é um número!")
   location.reload()
 }
-mesa_inicio = player * 2
-
-
-let mesa = sh_card.splice(mesa_inicio,5) //separa em uma rray as cartas da mesa
+mesa = player * 2 //define onde no deck começara a pegar cartas da mesa, considerando que ha 1 carta de descarte
 
 
 
+let mesa_3 = sh_card.splice(mesa+1,3) //separa em uma array as 3 cartas iniciais da mesa
 
-console.log(mesa)
+
+let mesa_4 = sh_card.splice(mesa+2,1) //separa a 4 carta da mesa, considerando 1 descarte
+let mesa_5 = sh_card.splice(mesa+3,1) //separa a 5 carta da mesa, considerando 1 descarte
+
+
+
+
+console.log(mesa_3)
+console.log(mesa_4)
+console.log(mesa_5)
+
+
 
 alert('')
-
-
-
