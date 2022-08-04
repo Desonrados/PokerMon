@@ -9,6 +9,6 @@ Pois bem eu te explico <br>
 No início ele pergunta quantos jogadores você quer que tenham na partida<br>
 Tendo o número de players em mãos ele roda uma função que distribui as roles do game, e mostra quem será quem.<br>
 O game no início pega todas cartas possíveis em um "deck" que já estão declaradas numa "const" e utiliza a função "shuffle", do início do código<br>
-para embaralhar as cartas antes de distribui-las, após isso o jogo ocorre como nas regras oficias do game.
+para embaralhar as cartas antes de distribui-las, após isso o jogo ocorre como nas regras oficiais do game.
 <br>
 
