@@ -33,7 +33,7 @@ console.log(sh_card);
 
 
 let numberPlayers =parseInt(prompt( 'number of players?')) 
-document.writeln(`Número de Jogadores: ${numberPlayers}`)
+document.writeln(`<p class="j-center"><br> Número de Jogadores ${numberPlayers}</p>`)
 if (numberPlayers < 2)  
 { 
   // verifica se ha menos de 2 players
@@ -71,15 +71,30 @@ if (bigblind>numberPlayers)
   bigblind=bigblind-numberPlayers
 }
 
-document.writeln(`<br>O Dealer é o ${dealer}`)
-document.writeln(`<br>O smallblind é o ${smallblind}`)
-document.writeln(`<br>O bigblind é o ${bigblind}`)
+document.writeln(`<p class="j-center"><br>O Dealer é o ${dealer}</p>`)
+document.writeln(`<p class="j-center"><br>O Small Blind é o ${smallblind}</p>`)
+document.writeln(`<p class="j-center"><br>O Big Blind é o ${bigblind}</p>`)
 
-document.writeln(`Primeiras cartas da mesa ${mesa_3}`)
+document.writeln(`<p class="j-center"><br>Primeiras cartas da mesa ${mesa_3}</p>`)
 console.log(mesa_4)
 console.log(mesa_5)
 
-// Função que utilizaremos mais tarde hehe
+
+/*
+---------------------------------------------
+
+Colocar número de jogadares direto no html
+
+---------------------------------------------
+use a form with submit event or an input and get its .value
+SubmitEvent has FormData which has all inputs in your form
+and inputs have .value which has the current value of the selected input
+i recommend checking the mdn docs for basic usage of the DOM api
+---------------------------------------------
+
+Adicionar imagem a um certo item do array 
+
+---------------------------------------------
 /*function makeCard(someNumber, image) {
   return {
     someNumber,
@@ -88,4 +103,6 @@ console.log(mesa_5)
 }
 
 const card1 = makeCard(1, "./cool.png")
-card1.someNumber*?*/
+card1.someNumber*?
+---------------------------------------------
+*/
