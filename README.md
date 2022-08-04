@@ -1,8 +1,8 @@
-<h1 class="j-center"> PokerMon </h1>
-<p class="j-center">
+<h1> PokerMon </h1>
+<p>
 PokerMon é uma reprodução do jogo de tabuleiro muito famoso nos EUA chamado Poker, porém dessa vez em versão Web.
 </p>
-<h2 class="j-center">
+<h2>
 Como funciona?
 </h2>
 Pois bem eu te explico <br>
@@ -11,11 +11,3 @@ Tendo o número de players em mãos ele roda uma função que distribui as roles
 O game no início pega todas cartas possíveis em um "deck" que já estão declaradas numa "const" e utiliza a função "shuffle", do início do código
 para embaralhar as cartas antes de distribui-las,<br> após isso o jogo ocorre como nas regras oficiais do game.
 <br>
-<style>
-  .j-center
-  {
-  display:flex;
-  justify-content:center;
-  }
-  
-</style>  
