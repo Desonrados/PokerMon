@@ -30,15 +30,28 @@ const cards =
 let sh_card = shuffle(cards);    
 console.log(sh_card);
 
-let numberPlayers = 0 
-onclick=() => getnumplayers()
+// Declara players para ser usado na função seguinte
+let numberPlayers = 0
 
-// Essa função pega o número de players, escreve na tela e retorna pro rolegens
-function getnumplayers(){
-numberPlayers = document.querySelector(`input#numplay`).value; 
-document.writeln(`<p class="j-center"><br> Número de Jogadores ${numberPlayers}</p>`)
-rolegen();
-return
+// Essa função pega o número de players, escreve na tela, cria as roles e diz
+// quais as primeiras 3 cartas da mesa
+function getvalue(){
+  numberPlayers = document.querySelector(`input#numplay`).value; 
+  document.writeln(`<p class="j-center"><br> Número de Jogadores é ${numberPlayers}</p>`)
+    let dealer = parseInt(Math.random() * (numberPlayers));
+    let smallblind=dealer+1
+    let bigblind=smallblind+1
+    if (bigblind>numberPlayers)
+    {
+    bigblind=bigblind-numberPlayers
+    }
+    document.writeln(`<p class="j-center"><br>O Dealer é o ${dealer}</p>`)
+    document.writeln(`<p class="j-center"><br>O Small Blind é o ${smallblind}</p>`)
+    document.writeln(`<p class="j-center"><br>O Big Blind é o ${bigblind}</p>`);
+    document.writeln(`<p class="j-center"><br>Primeiras cartas da mesa ${mesa_3}</p>`)
+console.log(mesa_4)
+console.log(mesa_5)
+  return
 }
 
 mesa = numberPlayers * 2 //define onde no deck começara a pegar cartas da mesa, considerando que ha 1 carta de descarte
@@ -47,34 +60,7 @@ let mesa_3 = sh_card.splice(mesa+1,3) //separa em uma array as 3 cartas iniciais
 let mesa_4 = sh_card.splice(mesa+2,1) //separa a 4ª carta da mesa, considerando 1 descarte
 let mesa_5 = sh_card.splice(mesa+3,1) //separa a 5ª carta da mesa, considerando 1 descarte
 
-// Gera o Dealer/Small/Big Blind
-function rolegen(){
-let dealer = parseInt(Math.random() * (numberPlayers));
-let smallblind=dealer+1
-let bigblind=smallblind+1
-if (bigblind>numberPlayers)
-{
-bigblind=bigblind-numberPlayers
-}
-document.writeln(`<p class="j-center"><br>O Dealer é o ${dealer}</p>`)
-document.writeln(`<p class="j-center"><br>O Small Blind é o ${smallblind}</p>`)
-document.writeln(`<p class="j-center"><br>O Big Blind é o ${bigblind}</p>`);
-return;
-}
-
-document.writeln(`<p class="j-center"><br>Primeiras cartas da mesa ${mesa_3}</p>`)
-console.log(mesa_4)
-console.log(mesa_5)
-
-
 /*
-Colocar número de jogadares direto no html
-
----------------------------------------------
-use a form with submit event or an input and get its .value
-SubmitEvent has FormData which has all inputs in your form
-and inputs have .value which has the current value of the selected input
-i recommend checking the mdn docs for basic usage of the DOM api
 ---------------------------------------------
 
 Adicionar imagem a um certo item do array 
