@@ -1,0 +1,8 @@
+.corpo{
+    width: 100vw;
+    height: 100vh;
+}
+.j-center{
+    display: flex;
+    justify-content: center;
+}

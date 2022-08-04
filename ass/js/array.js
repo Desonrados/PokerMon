@@ -17,8 +17,7 @@ function shuffle(array) {
 
   return array;
 }
-   // Após isso, os index já estão randomizados, você declara os itens
-   // que quer que preencham esses index random, como abaixo
+// Declaração das cartas
 const cards = 
 (
   [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0,
@@ -28,13 +27,13 @@ const cards =
 )
 
 
-// Cria um array (sh_cards, com os valores de cards com posições aleatorias
+// Mixa a posição das cartas em um array, usando a função anterior
 let sh_card = shuffle(cards);    
 console.log(sh_card);
 
 
 let numberPlayers =parseInt(prompt( 'number of players?')) 
-
+document.writeln(`Número de Jogadores: ${numberPlayers}`)
 if (numberPlayers < 2)  
 { 
   // verifica se ha menos de 2 players
@@ -72,15 +71,13 @@ if (bigblind>numberPlayers)
   bigblind=bigblind-numberPlayers
 }
 
-console.log(`O bigblind é ${bigblind}`)
-console.log(`O smallblind é ${smallblind}`)
-console.log(`O Dealer é ${dealer}`)
+document.writeln(`<br>O Dealer é o ${dealer}`)
+document.writeln(`<br>O smallblind é o ${smallblind}`)
+document.writeln(`<br>O bigblind é o ${bigblind}`)
 
-console.log(mesa_3)
+document.writeln(`Primeiras cartas da mesa ${mesa_3}`)
 console.log(mesa_4)
 console.log(mesa_5)
-
-alert('')
 
 // Função que utilizaremos mais tarde hehe
 /*function makeCard(someNumber, image) {
