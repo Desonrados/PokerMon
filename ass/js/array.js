@@ -26,7 +26,6 @@ const cards =
     1.3, 2.3, 3.3, 4.3, 5.3, 6.3, 7.3, 8.3, 9.3, 10.3, 11.3, 12.3, 13.3,]
 )
 
-
 // Mixa a posição das cartas em um array, usando a função anterior
 let sh_card = shuffle(cards);    
 console.log(sh_card);
@@ -81,6 +80,12 @@ console.log(mesa_5)
 
 
 /*
+Submita info do HTML pro JS
+---------------------------------------------
+HTML
+submit()
+JS
+document.getElementById("myForm").submit(); 
 ---------------------------------------------
 
 Colocar número de jogadares direto no html
