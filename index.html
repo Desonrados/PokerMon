@@ -6,18 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="./ass/css/style.css">
-    <title>Poker Mon</title>
+    <title>Poker-Mon</title>
 </head>
 <body>
 
 <div class="j-center">
-    <h1>PokerMon</h1>
+    <h1>Poker-Mon</h1>
 </div>
 <div class="j-center">
     <p>
         Número de Jogadores
     </p>
-    <input id="numplay" type="number" value="" min="1" max="22" maxlength="2">
+    <div class="width">
+        <input id="numplay" type="number" value="" min="1" max="22" maxlength="2" step="1">
+    </div>
+
     <input type="submit" value="Jogar!" onclick="getvalue()">
 </div>
 <script src="./ass/js/array.js"></script>

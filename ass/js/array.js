@@ -31,7 +31,7 @@ let sh_card = shuffle(cards);
 console.log(sh_card);
 
 // Declara players para ser usado na função seguinte
-let numberPlayers = 0
+let numberPlayers = undefined
 
 // Essa função pega o número de players, escreve na tela, cria as roles e diz
 // quais as primeiras 3 cartas da mesa
@@ -75,5 +75,21 @@ return {
 
 const card1 = makeCard(1, "./cool.png")
 card1.someNumber*?
+---------------------------------------------
+
+         Como faremos o backend
+
+---------------------------------------------
+any backend. If you're working with JS already, 
+anything Node, like Express is normally the starting point 
+for your very "first" backend
+---------------------------------------------
+
+             Anotações do Nicolas
+
+---------------------------------------------
+build a personal management app, build a e-commerce app, 
+build a payment/budget management app, Real Time Communication app
+these are some of the best project for job
 ---------------------------------------------
 */
