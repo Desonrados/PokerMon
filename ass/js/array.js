@@ -1,5 +1,6 @@
 function shuffle(array) {
 let currentIndex = array.length, randomIndex;
+let players = undefined
 
 // Enquanto o index atual não for igual a zero
 // ele continua mixando os index
