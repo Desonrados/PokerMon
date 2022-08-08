@@ -88,8 +88,9 @@ for your very "first" backend
              Anotações do Nicolas
 
 ---------------------------------------------
-build a personal management app, build a e-commerce app, 
+- build a personal management app, build a e-commerce app, 
 build a payment/budget management app, Real Time Communication app
 these are some of the best project for job
+- EJS (backend)
 ---------------------------------------------
 */
