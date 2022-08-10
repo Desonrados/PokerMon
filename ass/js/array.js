@@ -38,7 +38,7 @@ let numberPlayers = undefined
 // quais as primeiras 3 cartas da mesa
 function getvalue(){
   numberPlayers = document.querySelector(`input#numplay`).value; 
-  document.writeln(`<p class="j-center"><br> Número de Jogadores é ${numberPlayers}</p>`)
+  document.writeln(`<p class="j-center font"><br> Número de Jogadores é ${numberPlayers}</p>`)
     let dealer = parseInt(Math.random() * (numberPlayers));
     let smallblind=dealer+1
     let bigblind=smallblind+1
@@ -46,10 +46,10 @@ function getvalue(){
     {
     bigblind=bigblind-numberPlayers
     }
-    document.writeln(`<p class="j-center"><br>O Dealer é o ${dealer}</p>`)
-    document.writeln(`<p class="j-center"><br>O Small Blind é o ${smallblind}</p>`)
-    document.writeln(`<p class="j-center"><br>O Big Blind é o ${bigblind}</p>`);
-    document.writeln(`<p class="j-center"><br>Primeiras cartas da mesa ${mesa_3}</p>`)
+    document.writeln(`<p class="j-center font"><br>O Dealer é o ${dealer}</p>`)
+    document.writeln(`<p class="j-center font"><br>O Small Blind é o ${smallblind}</p>`)
+    document.writeln(`<p class="j-center font"><br>O Big Blind é o ${bigblind}</p>`);
+    document.writeln(`<p class="j-center font"><br>Primeiras cartas da mesa ${mesa_3}</p>`)
 console.log(mesa_4)
 console.log(mesa_5)
   return
@@ -67,6 +67,9 @@ let mesa_5 = sh_card.splice(mesa+3,1) //separa a 5ª carta da mesa, considerando
 Adicionar imagem a um certo item do array 
 
 ---------------------------------------------
+Teremos que criar objetos.
+Ainda não sei como fazer em js, só em c#
+
 /*function makeCard(someNumber, image) {
 return {
   someNumber,
@@ -84,6 +87,17 @@ card1.someNumber*?
 any backend. If you're working with JS already, 
 anything Node, like Express is normally the starting point 
 for your very "first" backend
+---------------------------------------------
+  
+            Login hash de senha
+
+---------------------------------------------
+> Do not ever store non-encrypted passwords in a 
+database, even as a test, because it is 
+absolutely not a thing that you should ever write.
+> choose your http server (express or fastify)
+> bd postgresql 
+> bcrypt or argon2 , and yes it's hashing (not enscrypt)
 ---------------------------------------------
 
              Anotações do Nicolas
