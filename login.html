@@ -15,10 +15,15 @@
     <title>Tela de Login</title>
 </head>
 <body class="font">
-    <div class="d-flex align-items-center">
-        <h1>
-            Login
+    <div>
+        <h1 id="hour">
+            Parabéns você encontrou um easter egg irrelevante, mas divertido. Apertou F12 ou leu o código fonte?
         </h1>
+    </div>
+    <div class="d-flex align-items-center">
+        <h2>
+            Login
+        </h2>
     </div>
     <div class="d-flex align-items-center">
         <h3>
@@ -27,7 +32,9 @@
     </div>
     <div class="d-flex align-items-center">
         <input id="nickname" type="text">
+        <a href="./index.html">
         <input type="submit" value="Entrar" onclick="getnick()">    
+        </a>
     </div>
     <div>
         Não tem uma conta ainda ?
@@ -35,5 +42,6 @@
         Crie clicando <a href="./account.html">aqui</a>
     </div>
 <script src="./ass/js/login.js"></script>
+<script src="./ass/js/hour.js"></script>
 </body>
 </html>

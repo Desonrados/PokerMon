@@ -3,13 +3,14 @@ Isso aqui serve para dar bom dia para a pesssoa, baseado no horário atual da m�
 */
 
 var time = new Date()
-var hora = time.getHours()
+var hour = time.getHours()
 
-console,log(`agora são exatamente ${hora}`)
-if(hora < 12) {
-    console.log("Bom dia")
-} else if(hora <= 18){
-    console.log("Boa tarde")
+if(hour < 12) {
+    document.querySelector(`h1#hour`).innerText = "Bom dia! Bora jogar uma ?"
+}
+else if(hour <= 18){
+    document.querySelector(`h1#hour`).innerText = "Boa tarde! Bora jogar uma ?"
+
 } else {
-console.log("Boa noite")
+    document.querySelector(`h1#hour`).innerText = "Boa noite! Bora jogar uma ?"
 }
